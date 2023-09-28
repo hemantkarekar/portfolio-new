@@ -1,0 +1,263 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap");
+$color-luminous-green: #55e6a5;
+$color-night: #141c27;
+$color-dark-night: #02050a;
+$color-white: #dfdfdf;
+$colors: (
+	"primary": $color-luminous-green,
+);
+
+$section-title: ();
+
+html {
+	* {
+		font-family: "Mulish", Arial, Helvetica, sans-serif;
+	}
+}
+
+body {
+	background-color: $color-dark-night;
+	color: $color-white;
+}
+h1,
+h2 {
+	font-weight: 800;
+	// color: $color-pink;
+}
+h3,
+h4,
+h5 {
+	font-weight: 500;
+}
+
+a {
+	color: $color-luminous-green;
+	text-decoration: none;
+}
+
+.modal {
+	z-index: 9999;
+}
+
+header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 999;
+	background-color: $color-night;
+	nav {
+		.nav-link {
+			color: $color-white !important;
+			&.disabled {
+				filter: saturate(0) brightness(0.5);
+			}
+		}
+		.navbar-brand {
+			color: $color-white !important;
+		}
+	}
+}
+
+.swiper {
+	.swiper-button-next,
+	.swiper-button-prev {
+		z-index: 50;
+	}
+}
+
+.btn {
+	padding: 0.5rem 1rem;
+	border-radius: 0.25rem;
+	@each $class, $color in $colors {
+		&.btn-#{$class} {
+			background-color: $color;
+			border: 1px solid $color;
+			color: $color-dark-night;
+			&:hover,
+			&:focus,
+			&:active {
+				border: 1px solid $color;
+				background-color: darken($color, $amount: 10);
+			}
+			&:active {
+				background-color: darken($color, $amount: 10);
+				box-shadow: 0 0 0 5px rgba($color, $alpha: 0.2);
+			}
+		}
+	}
+}
+
+.btn {
+	&.fixed {
+		position: fixed;
+		z-index: 998;
+		&-right {
+			@extend .fixed;
+			transform-origin: top right;
+			right: 0;
+			&-center {
+				@extend .fixed-right;
+				top: 50%;
+				transform: translateY(200%) rotateZ(90deg);
+			}
+		}
+	}
+}
+
+.fixed {
+}
+
+.flat-card {
+	&.flat-backdrop {
+		min-height: 200px;
+		&:hover {
+			.card-body {
+				&.backdrop-image {
+					background: #b4b4b4;
+				}
+				.content {
+					transform: translateY(0);
+				}
+			}
+		}
+		.card-body {
+			position: relative;
+			overflow: hidden;
+			&.backdrop-image {
+				background: #cdcdcd;
+			}
+			.content {
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				transform: translateY(100%);
+				transition: all 0.5s ease-in-out;
+				width: 100%;
+				padding: 1rem;
+			}
+		}
+	}
+	&:has(.icon) {
+		.icon {
+			width: 100px;
+			aspect-ratio: 1;
+			background-color: #cdcdcd;
+		}
+	}
+}
+
+.alert-status {
+	position: fixed;
+	top: 5rem;
+	right: 1rem;
+	z-index: 10;
+}
+main {
+	@media screen and (min-width: 768px) {
+		.flat-card {
+			&:not(.flat-backdrop) {
+				.card-body {
+					* {
+						text-align: center;
+					}
+				}
+			}
+		}
+		.landing-wrapper {
+			position: relative;
+			.registration-cta {
+				padding: 2rem 0;
+				z-index: 1;
+				position: absolute;
+				top: 4rem;
+				left: 3rem;
+				max-width: 600px;
+				height: 100%;
+			}
+		}
+	}
+	.form-wrapper {
+		background-color: white;
+		padding: 1rem;
+		border-radius: 0.5rem;
+		border: 2px solid rgba($color: black, $alpha: 0.05);
+		box-shadow: 5px 5px 10px 0 rgba($color: black, $alpha: 0.1);
+		label.error {
+			font-size: 0.75rem;
+			color: red;
+		}
+	}
+}
+
+section {
+	&:not(.banner-section) {
+		padding: calc(max(5%, 2rem)) 0;
+	}
+	.section-title {
+		margin-bottom: 2rem;
+		h2 {
+			position: relative;
+			padding-top: 1.72rem;
+			&::after {
+				content: "";
+				background-image: repeating-linear-gradient(
+					45deg,
+					#474bff 0,
+					#474bff 3.5px,
+					transparent 0,
+					transparent 50%
+				);
+				background-size: 20px 20px;
+				background-color: transparent;
+				position: absolute;
+				width: 4.5rem;
+				height: 0.75rem;
+				top: 0;
+				left: 0;
+			}
+			width: fit-content;
+			text-transform: uppercase;
+			font-size: calc(max(3vw, 3rem));
+		}
+		@mixin section-title($color) {
+			h2 {
+				&::after {
+					background-image: repeating-linear-gradient(
+						45deg,
+						$color 0,
+						$color 3.5px,
+						transparent 0,
+						transparent 50%
+					);
+				}
+			}
+		}
+		@each $class, $color in $section-title {
+			&.title-#{$class} {
+				@extend .section-title;
+				@if $class == "pink" {
+					@include section-title($color-sky-blue);
+				} @else if $class == "" {
+				}
+			}
+		}
+	}
+}
+
+footer {
+	.links{
+		a{
+			color: inherit;
+		}
+	}
+	.social-links {
+		font-size: 1.5rem;
+		.nav-link {
+			color: $color-luminous-green;
+			&.disabled {
+				filter: saturate(0) brightness(0.5);
+			}
+		}
+	}
+}

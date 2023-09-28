@@ -1,0 +1,24 @@
+[
+    {
+        "city" : "Thane",
+        "schools" : [
+            "New Horizon International School, Rodas",
+            "New Horizon Scholars School, Thane",
+            "New Horizon Scholars School, Rodas",
+            "New Horizon Scholars School, Vasant Lawns"
+        ]
+    },
+    {
+        "city" : "Panvel",
+        "schools" : [
+            "New Horizon Public School, Panvel"
+        ]
+    },
+    {
+        "city" : "Airoli",
+        "schools" : [
+            "New Horizon Scholars School, Airoli", 
+            "New Horizon Public School, Airoli"
+        ]
+    }
+]
