@@ -1,10 +1,10 @@
-<div class="bg-light">
+<div class="bg-dark">
     <div class="text-center">
         <a href="" class="btn">Scroll to Top</a>
     </div>
 </div>
 <div class="py-3">
-    <div class="row justify-content-center">
+    <div class="row m-0 justify-content-center">
         <div class="col-xxl-6 col lg-7 col-md-9 col-11">
             <div class="title mb-3">
                 <h2>Subscribe for Updates</h2>
