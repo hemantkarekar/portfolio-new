@@ -1,0 +1,32 @@
+[
+    {
+        "name" : "PHP",
+        "points" : 80,
+        "priority" : 1
+    },
+    {
+        "name" : "Codeigniter 3 & 4",
+        "points" : 65,
+        "priority" : 1
+    },
+    {
+        "name" : "HTML5",
+        "points" : 85,
+        "priority" : 1
+    },
+    {
+        "name" : "CSS + SASS",
+        "points" : 80,
+        "priority" : 1
+    },
+    {
+        "name" : "JavaScript",
+        "points" : 65,
+        "priority" : 1
+    },
+    {
+        "name" : "Laravel",
+        "points" : 30,
+        "priority" : 2
+    }
+]

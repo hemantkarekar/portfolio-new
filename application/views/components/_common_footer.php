@@ -1,9 +1,9 @@
-<div class="bg-dark">
+<div class="bg-dark d-none">
     <div class="text-center">
         <a href="" class="btn">Scroll to Top</a>
     </div>
 </div>
-<div class="py-3">
+<div class="py-3 d-none">
     <div class="row m-0 justify-content-center">
         <div class="col-xxl-6 col lg-7 col-md-9 col-11">
             <div class="title mb-3">
@@ -27,12 +27,12 @@
 <div class="py-3">
     <div class="container">
         <div class="row justify-content-between">
-            <div class="col-xl-3 col-lg-4 col-md-6 col-12">
+            <div class="col-xl-3 col-lg-4 col-md-6 col-12 d-none">
                 <div class="title">
                     <h5>Contact Us</h5>
                 </div>
             </div>
-            <div class="col-xl-3 col-lg-4 col-md-6 col-12">
+            <div class="col-xl-3 col-lg-4 col-md-6 col-12 d-none">
                 <div class="title">
                     <h5>Quick Links</h5>
                 </div>

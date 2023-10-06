@@ -56,6 +56,7 @@ $route['register-now'] = 'pages/register';
 $route['ax/admission/new'] ="AdmissionController/register";
 
 $route['api/schools/get'] ="DataController/get_institute";
+$route['api/download/cv'] ="ActionController/download_cv";
 
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;

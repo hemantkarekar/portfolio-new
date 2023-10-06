@@ -39,6 +39,23 @@ a {
 
 .modal {
 	z-index: 9999;
+	.modal-content{
+		border-radius: unset;
+		background-color: $color-night;
+		color: $color-white;
+	}
+
+	.modal-header{
+		border-top-left-radius: 0;
+		border-top-right-radius: 0;
+		border-color: lighten($color: $color-night, $amount: 10);
+		.btn-close{
+			filter: contrast(0) brightness(20);
+		}
+	}
+	.modal-footer{
+		border-top: 0;
+	}
 }
 
 header {
@@ -73,6 +90,28 @@ header {
 	border-radius: unset;
 }
 
+.progress{
+	background-color: $color-night;
+}
+
+input, select{
+	&.form-control{
+		background-color: $color-night;
+		border: 1px solid $color-neon-green;
+		color: $color-white !important;
+		&::placeholder{
+			color: lighten($color: $color-night, $amount: 20)
+		}
+		&:focus{
+			background-color: lighten($color: $color-night, $amount: 5);
+			box-shadow: 0 0 0 5px rgba($color-neon-green, $alpha: 0.2);
+		}
+		&:active {
+			box-shadow: 0 0 0 5px rgba($color-neon-green, $alpha: 0.2);
+		}
+	}
+}
+
 @each $class, $color in $colors {
 	.text-#{$class} {
 		color: $color !important;
@@ -82,18 +121,17 @@ header {
 	}
 }
 .btn-w_icon {
+}
+.btn-w_icon-right {
 	display: flex;
-	gap: 0.25rem;
+	width: fit-content;
+	gap: 0.5rem;
+	align-items: center;
+	justify-content: space-between;
 }
 .btn {
 	padding: 0.5rem 1rem;
 	border-radius: unset;
-	.btn-w_icon {
-		&-right {
-			@extend .btn-w_icon;
-			padding-left: 0.25rem;
-		}
-	}
 
 	&.btn-lg {
 		padding: 0.75rem 1.5rem;
@@ -159,6 +197,13 @@ header {
 		top: 0;
 		left: 0;
 	}
+}
+
+.skill{
+	.skill_name{
+		padding: 0.5rem 1rem;
+	}
+	background-color: rgba($color: $color-night, $alpha: 0.51);
 }
 
 .flat-card {
@@ -246,7 +291,7 @@ main {
 .page-title {
 	h1 {
 		text-transform: uppercase;
-		font-size: calc(max(2.5rem, 4vw));
+		font-size: calc(max(2.5rem, 3vw));
 	}
 }
 
@@ -256,28 +301,15 @@ section {
 	}
 	.section-title {
 		margin-bottom: 2rem;
-		h2 {
-			position: relative;
-			padding-top: 1.72rem;
-			&::after {
-				content: "";
-				background-image: repeating-linear-gradient(
-					45deg,
-					#474bff 0,
-					#474bff 3.5px,
-					transparent 0,
-					transparent 50%
-				);
-				background-size: 20px 20px;
-				background-color: transparent;
-				position: absolute;
-				width: 4.5rem;
-				height: 0.75rem;
-				top: 0;
-				left: 0;
-			}
-			width: fit-content;
+		color: $color-white;
+		.title{
+			margin: 0;
 			text-transform: uppercase;
+			color: $color-neon-green;
+			font-size: calc(max(1.5vw, 1.5rem));
+		}
+		h2 {
+			margin: 0;
 			font-size: calc(max(3vw, 3rem));
 		}
 		@mixin section-title($color) {
