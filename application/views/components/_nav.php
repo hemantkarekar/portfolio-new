@@ -3,7 +3,7 @@
         <div class="container">
             <!-- <a class="navbar-brand" href="#">Navbar</a> -->
             <a class="navbar-brand brand-logo py-0" href="<?= base_url() ?>">
-                <img src="<?= base_url() ?>assets/media/logo.jpg" alt="Logo" class="d-inline-block" height="50">
+                <img src="<?= base_url() ?>assets/media/logo-white.svg" alt="Logo" class="d-inline-block" height="50">
                 &nbsp;<?= APP_NAME ?>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
