@@ -24,4 +24,8 @@ class ActionController extends CI_Controller
         force_download($filename . ".pdf", file_get_contents(base_url("assets/cv.pdf")));
         redirect($_SERVER["HTTP_REFERER"]);
     }
+
+    public function test(){
+        print_r($this->db->get('cv_downloads')->result_array());
+    }
 }
