@@ -121,7 +121,7 @@
 						</div>
 						<div class="desc mb-5">
 							<p>
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque quam distinctio corporis, veniam officia quis, ex quo laboriosam molestiae rem quasi totam mollitia at eveniet vero labore cumque explicabo ipsa dolorem expedita accusantium, consequatur assumenda porro. Debitis, quis. Consequuntur, sunt?
+							I understand that your website is your digital storefront. It is the first thing potential customers will see, so it is important to make a good first impression. I would work with you to create a website that is both visually appealing and functional, using the latest technologies and SEO best practices to ensure that your website is found by potential customers.
 							</p>
 						</div>
 						<button type="button" class="btn btn-lg btn-primary btn-w_icon-right cvEnquiryModalBtn" id="cvEnquiryModalBtn">Download CV<i class="ti ti-download icon"></i></button>
