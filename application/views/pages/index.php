@@ -15,7 +15,7 @@
 				<div class="row m-0 flex-row-reverse align-items-center">
 					<div class="col-xl-4 col-lg-5 col-md-6">
 						<div class="media-content">
-							<div class="portfolio__img">
+							<div class="portfolio__img d-none">
 								<picture>
 									<source media="(min-width: )" srcset="">
 									<img class="w-100" src="<?= base_url() ?>assets/media/banner_img_1.png" alt="Persona Image">

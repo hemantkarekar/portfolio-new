@@ -57,10 +57,10 @@
                 <div class="links social-links">
                     <ul class="nav">
                         <li class="nav-item">
-                            <a class="nav-link" href="#"><i class="fa-brands fa-github"></i></a>
+                            <a class="nav-link" href="https://github.com/HemantKarekar" target="_blank"><i class="fa-brands fa-github"></i></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                            <a class="nav-link" href="https://www.linkedin.com/in/hemantkarekar/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link disabled" aria-disabled="true"><i class="fa-brands fa-slack"></i></a>
@@ -79,7 +79,7 @@
             </div>
             <div class="col-sm-6">
                 <div class="text-sm-end d-none d-sm-block">
-                    Designed &amp; Developed by <a href="" target="_blank" class="link"><i class="fa-brands fa-github"></i>&nbsp;Hemant Karekar</a>
+                    Designed &amp; Developed by <a href="https://github.com/HemantKarekar" target="_blank" class="link"><i class="fa-brands fa-github"></i>&nbsp;Hemant Karekar</a>
                 </div>
             </div>
         </div>
