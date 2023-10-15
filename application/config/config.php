@@ -24,7 +24,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |
 */
 $config['base_url'] = 'http://localhost/portfolio-website/';
-// $config['base_url'] = 'https://hemantkarekar.com/';
+$config['base_url'] = 'https://hemantkarekar.com/';
 
 /*
 |--------------------------------------------------------------------------
