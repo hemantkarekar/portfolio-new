@@ -51,12 +51,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 */
 $route['default_controller'] = 'pages';
 
-$route['register-now'] = 'pages/register';
+$route['register-now'] = 'pages/index';
 
 $route['ax/admission/new'] ="AdmissionController/register";
 
 $route['api/schools/get'] ="DataController/get_institute";
-$route['api/download/cv'] ="ActionController/download_cv";
+$route['api/download/cv']['POST'] ="ActionController/download_cv";
+
+$route['api/download/cv/count']['POST'] ="ActionController/download_cv";
 
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;

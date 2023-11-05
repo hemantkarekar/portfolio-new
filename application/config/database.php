@@ -70,8 +70,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | The $query_builder variables lets you determine whether or not to load
 | the query builder class.
 */
-$active_group = 'production';
 $active_group = 'default';
+$active_group = 'production';
 $query_builder = TRUE;
 
 $db['default'] = array(
@@ -79,7 +79,7 @@ $db['default'] = array(
 	'hostname' => 'localhost',
 	'username' => 'root',
 	'password' => '',
-	'database' => 'portfolio_website',
+	'database' => 'hemantkarekar_porfolio_main',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
@@ -120,9 +120,9 @@ $db['testing'] = array(
 $db['production'] = array(
 	'dsn'	=> '',
 	'hostname' => 'localhost',
-	'username' => 'nmmcisl_admin',
-	'password' => 'L9k[?lBB%nGX',
-	'database' => 'nmmcisl_website',
+	'username' => 'u862955700_Dd1Hi8RCK6',
+	'password' => 'Dd1Hi8RCK6',
+	'database' => 'u862955700_Dd1H_portfolio',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,

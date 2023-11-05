@@ -56,7 +56,7 @@
 		<div class="modal fade" id="cvEnquiryModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="cvEnquiryModalLabel" aria-hidden="true">
 			<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
 				<!-- <form action="" method="post"> -->
-				<?= form_open("api/download/cv", ["id" => "", "class" => ""]) ?>
+				<?= form_open("api/download/cv", ["id" => "downloadCVForm", "class" => ""]) ?>
 				<div class="modal-content">
 					<div class="modal-header">
 						<h1 class="modal-title fs-5" id="cvEnquiryModalLabel"></h1>
@@ -65,11 +65,11 @@
 					<div class="modal-body">
 						<div class="mb-2">
 							<label for="" class="form-label">Your Full Name</label>
-							<input type="text" class="form-control" name="" id="" placeholder="Your Name">
+							<input type="text" class="form-control" name="name" id="" placeholder="Your Name">
 						</div>
 						<div class="mb-2">
 							<label for="" class="form-label">Your Email Address</label>
-							<input type="email" class="form-control" name="" id="" placeholder="Your Email Address">
+							<input type="email" class="form-control" name="email" id="" placeholder="Your Email Address">
 						</div>
 					</div>
 					<div class="modal-footer">
@@ -80,28 +80,15 @@
 				</form>
 			</div>
 		</div>
-		<?php if ($this->input->cookie('cvConsentUserToken') != NULL) : ?>
-			<script>
-				$(function() {
-					$('.cvEnquiryModalBtn').each((index, elem) => {
-						$(elem).click(function() {
-							// AJAX Code to Update DB Count
-							alert("Welcome Again");
-						})
+		<script>
+			$(function() {
+				$('.cvEnquiryModalBtn').each((index, elem) => {
+					$(elem).click(function() {
+						$("#cvEnquiryModal").modal('show');
 					})
 				})
-			</script>
-		<?php else : ?>
-			<script>
-				$(function() {
-					$('.cvEnquiryModalBtn').each((index, elem) => {
-						$(elem).click(function() {
-							$("#cvEnquiryModal").modal('show');
-						})
-					})
-				})
-			</script>
-		<?php endif ?>
+			})
+		</script>
 		<section id="services">
 			<div class="container">
 				<div class="text-center section-title">
@@ -121,7 +108,7 @@
 						</div>
 						<div class="desc mb-5">
 							<p>
-							I understand that your website is your digital storefront. It is the first thing potential customers will see, so it is important to make a good first impression. I would work with you to create a website that is both visually appealing and functional, using the latest technologies and SEO best practices to ensure that your website is found by potential customers.
+								I understand that your website is your digital storefront. It is the first thing potential customers will see, so it is important to make a good first impression. I would work with you to create a website that is both visually appealing and functional, using the latest technologies and SEO best practices to ensure that your website is found by potential customers.
 							</p>
 						</div>
 						<button type="button" class="btn btn-lg btn-primary btn-w_icon-right cvEnquiryModalBtn" id="cvEnquiryModalBtn">Download CV<i class="ti ti-download icon"></i></button>
